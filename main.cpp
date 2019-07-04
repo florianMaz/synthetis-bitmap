@@ -3,35 +3,78 @@
 #include <omp.h>
 #include "EasyBMP.h"
 
-int main(int argc, char const *argv[]) {
-    double startTime;
-    double endTime;
-    BMP Greyscale;  
-    Greyscale.ReadFromFile("piaf.bmp");  
-    BMP OutputGreyscale;  
-    int picWidth = Greyscale.TellWidth();  
-    int picHeight = Greyscale.TellHeight();  
-    OutputGreyscale.SetSize(Greyscale.TellWidth() , Greyscale.TellHeight());  
-    OutputGreyscale.SetBitDepth(1);
-    startTime = omp_get_wtime();
-    #pragma omp parallel for private(col)
-    for (int i = 1; i < picWidth-1; ++i) {
-        for (int j = 1; j < picHeight-1; ++j) {   
-                    int col = (Greyscale(i, j)->Blue + Greyscale(i,j)->Green +10* Greyscale(i,j)->Red)/12;   
-                    if (col > 127) {  
-                        OutputGreyscale(i,j)->Red = 255;
-                        OutputGreyscale(i,j)->Blue = 255;
-                        OutputGreyscale(i,j)->Green = 255; 
-                    } else {
-                        OutputGreyscale(i,j)->Red = 0;
-                        OutputGreyscale(i,j)->Blue = 0;
-                        OutputGreyscale(i,j)->Green = 0;      
-                    }    
+double startTime;
+double endTime;
+int col;
+BMP BlackWhiteScale;
+BMP OutputBlackWhiteScale;
+
+BMP NegaScale;
+BMP OutputNegaScale;
+
+int picWidth;
+int picHeight;
+int RED;
+int GREEN;
+int BLUE;
+int width;
+int height;
+
+void bmpToNegative(){
+    NegaScale.ReadFromFile("piaf.bmp");
+    picWidth = NegaScale.TellWidth();
+    picHeight = NegaScale.TellHeight();
+    NegaScale.SetSize(NegaScale.TellWidth() , NegaScale.TellHeight());
+    NegaScale.SetBitDepth(1);
+    #pragma omp parallel for private(width, height, RED, BLUE, GREEN)
+    for (width = 1; width < picWidth-1; ++width) {
+        for (height = 1; height < picHeight-1; ++height) {
+            RED = NegaScale(width,height)->Red;
+            GREEN = NegaScale(width,height)->Green;
+            BLUE = NegaScale(width,height)->Blue;
+
+            NegaScale(width,height)->Red = 255 - RED;
+            NegaScale(width,height)->Green = 255 - GREEN;
+            NegaScale(width,height)->Blue = 255 - BLUE;
         }
     }
-    end = omp_get_wtime();
+
+    NegaScale.WriteToFile("piafnegative.bmp");
+}
+
+void bmpToBlackWhite(){
+    BlackWhiteScale.ReadFromFile("piaf.bmp");
+    picWidth = BlackWhiteScale.TellWidth();
+    picHeight = BlackWhiteScale.TellHeight();
+    OutputBlackWhiteScale.SetSize(BlackWhiteScale.TellWidth() , BlackWhiteScale.TellHeight());
+    OutputBlackWhiteScale.SetBitDepth(1);
+    startTime = omp_get_wtime();
+    #pragma omp parallel for private(col, width, height, RED, BLUE, GREEN)
+    for (width = 1; width < picWidth-1; ++width) {
+        for (height = 1; height < picHeight-1; ++height) {
+            col = (BlackWhiteScale(width,height)->Blue + BlackWhiteScale(width,height)->Green +10* BlackWhiteScale(width,height)->Red)/12;
+            if (col > 127) {
+                OutputBlackWhiteScale(width,height)->Red = 255;
+                OutputBlackWhiteScale(width,height)->Blue = 255;
+                OutputBlackWhiteScale(width,height)->Green = 255;
+            } else {
+                OutputBlackWhiteScale(width,height)->Red = 0;
+                OutputBlackWhiteScale(width,height)->Blue = 0;
+                OutputBlackWhiteScale(width,height)->Green = 0;
+            }
+        }
+    }
+    endTime = omp_get_wtime();
     printf("Time for loop : %f seconds\n", (endTime-startTime));
 
-    OutputGrayscale.WriteToFile("piafgreyscale.bmp");  
+    OutputBlackWhiteScale.WriteToFile("piafblackwhite.bmp");
+}
+
+int main(int argc, char const *argv[]) {
+
+    bmpToBlackWhite();
+    bmpToNegative();
     return 0; 
 }
+
+
