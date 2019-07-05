@@ -72,8 +72,26 @@ void bmpToBlackWhite(){
 
 int main(int argc, char const *argv[]) {
 
-    bmpToBlackWhite();
-    bmpToNegative();
+    int choix;
+
+    printf("1.Black & White Bmp \n2.Negative Bmp\n");
+    printf("Choice: ");
+    scanf("%d", &choix);
+
+    switch (choix) {
+        case 1:
+            bmpToBlackWhite();
+            break;
+        case 2:
+            bmpToNegative();
+            break;
+        default:
+            printf("Error choice\n");
+            break;
+
+    }
+    printf("\n");
+
     return 0; 
 }
 
