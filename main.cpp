@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
-#include "EasyBMP.h"
+#include "Headers/EasyBMP.h"
 
 double startTime;
 double endTime;
