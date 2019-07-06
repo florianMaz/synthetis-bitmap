@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
-#include "EasyBMP.h"
+#include "Headers/EasyBMP.h"
 
 double startTime;
 double endTime;
@@ -77,8 +77,27 @@ void bmpToBlackWhite(){
 }
 
 int main(int argc, char const *argv[]) {
-    bmpToNegative();
-    bmpToBlackWhite();
+
+    int choix;
+
+    printf("1.Black & White Bmp \n2.Negative Bmp\n");
+    printf("Choice: ");
+    scanf("%d", &choix);
+
+    switch (choix) {
+        case 1:
+            bmpToBlackWhite();
+            break;
+        case 2:
+            bmpToNegative();
+            break;
+        default:
+            printf("Error choice\n");
+            break;
+
+    }
+    printf("\n");
+
     return 0; 
 }
 
