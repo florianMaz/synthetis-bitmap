@@ -11,6 +11,8 @@ BMP OutputBlackWhiteScale;
 
 BMP NegaScale;
 BMP OutputNegaScale;
+RGBApixel colorNega;
+RGBApixel outputColorNega;
 
 int picWidth;
 int picHeight;
@@ -29,13 +31,17 @@ void bmpToNegative(){
     #pragma omp parallel for private(width, height, RED, BLUE, GREEN)
     for (width = 1; width < picWidth-1; ++width) {
         for (height = 1; height < picHeight-1; ++height) {
-            RED = NegaScale(width,height)->Red;
-            GREEN = NegaScale(width,height)->Green;
-            BLUE = NegaScale(width,height)->Blue;
+            colorNega = NegaScale.GetPixel(width,height);
 
-            NegaScale(width,height)->Red = 255 - RED;
-            NegaScale(width,height)->Green = 255 - GREEN;
-            NegaScale(width,height)->Blue = 255 - BLUE;
+            outputColorNega.Blue = 255 - colorNega.Blue/2;
+            outputColorNega.Red = 255 - colorNega.Red/2;
+            outputColorNega.Green = 255 - colorNega.Green/2;
+            NegaScale.SetPixel(width, height, outputColorNega);
+            if(width<10 && height<10){
+                printf("red : %d\n",  colorNega.Red);
+                printf("Blue : %d\n",  colorNega.Blue);
+                printf("green : %d\n",  colorNega.Green);
+            }
         }
     }
 
@@ -71,9 +77,8 @@ void bmpToBlackWhite(){
 }
 
 int main(int argc, char const *argv[]) {
-
-    bmpToBlackWhite();
     bmpToNegative();
+    bmpToBlackWhite();
     return 0; 
 }
 
