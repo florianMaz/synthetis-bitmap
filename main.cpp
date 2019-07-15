@@ -26,22 +26,15 @@ void bmpToNegative(){
     NegaScale.ReadFromFile("piaf.bmp");
     picWidth = NegaScale.TellWidth();
     picHeight = NegaScale.TellHeight();
-    NegaScale.SetSize(NegaScale.TellWidth() , NegaScale.TellHeight());
-    NegaScale.SetBitDepth(1);
     #pragma omp parallel for private(width, height, RED, BLUE, GREEN)
     for (width = 1; width < picWidth-1; ++width) {
         for (height = 1; height < picHeight-1; ++height) {
             colorNega = NegaScale.GetPixel(width,height);
 
-            outputColorNega.Blue = 255 - colorNega.Blue/2;
-            outputColorNega.Red = 255 - colorNega.Red/2;
-            outputColorNega.Green = 255 - colorNega.Green/2;
+            outputColorNega.Blue = 255 - colorNega.Blue;
+            outputColorNega.Red = 255 - colorNega.Red;
+            outputColorNega.Green = 255 - colorNega.Green;
             NegaScale.SetPixel(width, height, outputColorNega);
-            if(width<10 && height<10){
-                printf("red : %d\n",  colorNega.Red);
-                printf("Blue : %d\n",  colorNega.Blue);
-                printf("green : %d\n",  colorNega.Green);
-            }
         }
     }
 
