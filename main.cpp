@@ -5,6 +5,8 @@
 
 double startTime;
 double endTime;
+double startTimeNega;
+double endTimeNega;
 int col;
 BMP BlackWhiteScale;
 BMP OutputBlackWhiteScale;
@@ -26,6 +28,7 @@ void bmpToNegative(){
     NegaScale.ReadFromFile("piaf.bmp");
     picWidth = NegaScale.TellWidth();
     picHeight = NegaScale.TellHeight();
+    startTimeNega = omp_get_wtime();
     #pragma omp parallel for private(width, height, RED, BLUE, GREEN)
     for (width = 1; width < picWidth-1; ++width) {
         for (height = 1; height < picHeight-1; ++height) {
@@ -38,6 +41,8 @@ void bmpToNegative(){
         }
     }
 
+    endTimeNega = omp_get_wtime();
+    printf("Time for loop : %f seconds\n", (endTimeNega-startTimeNega));
     NegaScale.WriteToFile("piafnegative.bmp");
 }
 
