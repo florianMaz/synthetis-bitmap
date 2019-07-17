@@ -26,9 +26,12 @@ int height;
 
 void bmpToNegative(){
     NegaScale.ReadFromFile("kandinsky.comp-4.bmp");
+
     picWidth = NegaScale.TellWidth();
     picHeight = NegaScale.TellHeight();
+
     startTimeNega = omp_get_wtime();
+
     #pragma omp parallel for private(height, RED, BLUE, GREEN, colorNega, outputColorNega)
     for (width = 1; width < picWidth-1; ++width) {
         for (height = 1; height < picHeight-1; ++height) {
@@ -48,11 +51,15 @@ void bmpToNegative(){
 
 void bmpToBlackWhite(){
     BlackWhiteScale.ReadFromFile("kandinsky.comp-4.bmp");
+
     picWidth = BlackWhiteScale.TellWidth();
     picHeight = BlackWhiteScale.TellHeight();
+
     OutputBlackWhiteScale.SetSize(BlackWhiteScale.TellWidth() , BlackWhiteScale.TellHeight());
     OutputBlackWhiteScale.SetBitDepth(1);
+
     startTime = omp_get_wtime();
+
     #pragma omp parallel for private(col, height, RED, BLUE, GREEN)
     for (width = 1; width < picWidth-1; ++width) {
         for (height = 1; height < picHeight-1; ++height) {

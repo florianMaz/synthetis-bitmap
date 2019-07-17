@@ -19,11 +19,14 @@ int main(int argc, char* argv[]) {
     strcpy(nameFileOutput, argv[4]);
 
     BMP resizeBMP;
-    resizeBMP.ReadFromFile(nameFileInput); //"piaf.bmp"
+    resizeBMP.ReadFromFile(nameFileInput); //"image.bmp"
+
+    int imageWidth = resizeBMP.TellWidth();
+    int imageHeight = resizeBMP.TellHeight();
 
     if(strncmp(option, "p", strlen(option)) == 0) {
 
-        Rescale(resizeBMP, 'p', atoi(sizeImg)); //atoi(argv[1])
+        Rescale(resizeBMP, 'p', atoi(sizeImg));
 
     } else if(strncmp(option, "h", strlen(option)) == 0) {
 
@@ -35,5 +38,11 @@ int main(int argc, char* argv[]) {
     }
 
     resizeBMP.WriteToFile(nameFileOutput); // "rescale.bmp"
+    printf("Image: %d x %d\n", imageWidth, imageHeight);
+
+    int imageWidthFinal = resizeBMP.TellWidth();
+    int imageHeightFinal = resizeBMP.TellHeight();
+
+    printf("Rescale Image: %d x %d\n", imageWidthFinal, imageHeightFinal);
     std::cout << "Resize Bmp Generated !" << std::endl;
 }
