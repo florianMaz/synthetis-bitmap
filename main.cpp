@@ -25,11 +25,11 @@ int width;
 int height;
 
 void bmpToNegative(){
-    NegaScale.ReadFromFile("piaf.bmp");
+    NegaScale.ReadFromFile("kandinsky.comp-4.bmp");
     picWidth = NegaScale.TellWidth();
     picHeight = NegaScale.TellHeight();
     startTimeNega = omp_get_wtime();
-    #pragma omp parallel for private(width, height, RED, BLUE, GREEN)
+    #pragma omp parallel for private(height, RED, BLUE, GREEN, colorNega, outputColorNega)
     for (width = 1; width < picWidth-1; ++width) {
         for (height = 1; height < picHeight-1; ++height) {
             colorNega = NegaScale.GetPixel(width,height);
@@ -47,13 +47,13 @@ void bmpToNegative(){
 }
 
 void bmpToBlackWhite(){
-    BlackWhiteScale.ReadFromFile("piaf.bmp");
+    BlackWhiteScale.ReadFromFile("kandinsky.comp-4.bmp");
     picWidth = BlackWhiteScale.TellWidth();
     picHeight = BlackWhiteScale.TellHeight();
     OutputBlackWhiteScale.SetSize(BlackWhiteScale.TellWidth() , BlackWhiteScale.TellHeight());
     OutputBlackWhiteScale.SetBitDepth(1);
     startTime = omp_get_wtime();
-    #pragma omp parallel for private(col, width, height, RED, BLUE, GREEN)
+    #pragma omp parallel for private(col, height, RED, BLUE, GREEN)
     for (width = 1; width < picWidth-1; ++width) {
         for (height = 1; height < picHeight-1; ++height) {
             col = (BlackWhiteScale(width,height)->Blue + BlackWhiteScale(width,height)->Green +10* BlackWhiteScale(width,height)->Red)/12;
@@ -94,6 +94,7 @@ int main(int argc, char const *argv[]) {
             break;
 
     }
+    printf("threads : %d", omp_get_num_threads());
     printf("\n");
 
     return 0; 
