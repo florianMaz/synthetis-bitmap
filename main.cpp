@@ -30,6 +30,8 @@ void bmpToNegative(){
     picWidth = NegaScale.TellWidth();
     picHeight = NegaScale.TellHeight();
 
+    printf("Dimensions: %d x %d\n", picWidth, picHeight);
+
     startTimeNega = omp_get_wtime();
 
     #pragma omp parallel for private(height, RED, BLUE, GREEN, colorNega, outputColorNega)
@@ -45,7 +47,16 @@ void bmpToNegative(){
     }
 
     endTimeNega = omp_get_wtime();
+
+    printf("Negative Image Generated !\n");
+
     printf("Time for loop : %f seconds\n", (endTimeNega-startTimeNega));
+
+    int imageWidthFinal = NegaScale.TellWidth();
+    int imageHeightFinal = NegaScale.TellHeight();
+
+    printf("Rescale Image: %d x %d\n", imageWidthFinal, imageHeightFinal);
+
     NegaScale.WriteToFile("piafnegative.bmp");
 }
 
@@ -54,6 +65,8 @@ void bmpToBlackWhite(){
 
     picWidth = BlackWhiteScale.TellWidth();
     picHeight = BlackWhiteScale.TellHeight();
+
+    printf("Dimensions: %d x %d\n", picWidth, picHeight);
 
     OutputBlackWhiteScale.SetSize(BlackWhiteScale.TellWidth() , BlackWhiteScale.TellHeight());
     OutputBlackWhiteScale.SetBitDepth(1);
@@ -76,7 +89,15 @@ void bmpToBlackWhite(){
         }
     }
     endTime = omp_get_wtime();
+
+    printf("Black&White Image Generated !\n" );
+
     printf("Time for loop : %f seconds\n", (endTime-startTime));
+
+    int imageWidthFinal = BlackWhiteScale.TellWidth();
+    int imageHeightFinal = BlackWhiteScale.TellHeight();
+
+    printf("Rescale Image: %d x %d\n", imageWidthFinal, imageHeightFinal);
 
     OutputBlackWhiteScale.WriteToFile("piafblackwhite.bmp");
 }
@@ -91,16 +112,18 @@ int main(int argc, char const *argv[]) {
 
     switch (choix) {
         case 1:
+            system("clear");
             bmpToBlackWhite();
             break;
         case 2:
+            system("clear");
             bmpToNegative();
             break;
         default:
             printf("Error choice\n");
             break;
-
     }
+
     printf("threads : %d", omp_get_num_threads());
     printf("\n");
 

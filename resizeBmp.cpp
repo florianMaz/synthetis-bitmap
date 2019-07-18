@@ -38,11 +38,11 @@ int main(int argc, char* argv[]) {
     }
 
     resizeBMP.WriteToFile(nameFileOutput); // "rescale.bmp"
-    printf("Image: %d x %d\n", imageWidth, imageHeight);
+    printf("Dimensions Image: %d x %d\n", imageWidth, imageHeight);
 
     int imageWidthFinal = resizeBMP.TellWidth();
     int imageHeightFinal = resizeBMP.TellHeight();
 
     printf("Rescale Image: %d x %d\n", imageWidthFinal, imageHeightFinal);
-    std::cout << "Resize Bmp Generated !" << std::endl;
+    printf("Resize Bmp Generated !");
 }

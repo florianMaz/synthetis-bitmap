@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="synthetis_bitmap"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="synthetis_bitmap">
+				<Option output="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/synthetis_bitmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/Headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 synthetis_bitmap"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="synthetis_bitmap/fast">
+				<Option output="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/synthetis_bitmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/Headers"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 synthetis_bitmap/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/lays/Desktop/ESGI\ -\ 4MOC/SEM\ 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/EasyBMP.cpp">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/Headers/EasyBMP.h">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/Headers/EasyBMP_BMP.h">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/Headers/EasyBMP_DataStructures.h">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/Headers/EasyBMP_VariousBMPutilities.h">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalTest.cpp">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/main.cpp">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/resizeBmp.cpp">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/sample/EasyBMPsample.cpp">
+			<Option target="synthetis_bitmap"/>
+		</Unit>
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
