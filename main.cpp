@@ -26,7 +26,6 @@ int height;
 
 void bmpToNegative(){
     NegaScale.ReadFromFile("kandinsky.comp-4.bmp");
-
     picWidth = NegaScale.TellWidth();
     picHeight = NegaScale.TellHeight();
 
@@ -57,12 +56,11 @@ void bmpToNegative(){
 
     printf("Rescale Image: %d x %d\n", imageWidthFinal, imageHeightFinal);
 
-    NegaScale.WriteToFile("piafnegative.bmp");
+    NegaScale.WriteToFile("ImgNegative.bmp");
 }
 
 void bmpToBlackWhite(){
     BlackWhiteScale.ReadFromFile("kandinsky.comp-4.bmp");
-
     picWidth = BlackWhiteScale.TellWidth();
     picHeight = BlackWhiteScale.TellHeight();
 
@@ -99,11 +97,13 @@ void bmpToBlackWhite(){
 
     printf("Rescale Image: %d x %d\n", imageWidthFinal, imageHeightFinal);
 
-    OutputBlackWhiteScale.WriteToFile("piafblackwhite.bmp");
+    OutputBlackWhiteScale.WriteToFile("ImgBlackWhite.bmp");
 }
 
 int main(int argc, char const *argv[]) {
-
+    #pragma omp parallel
+    #pragma omp master
+    printf("threads : %d\n", omp_get_num_threads());
     int choix;
 
     printf("1.Black & White Bmp \n2.Negative Bmp\n");
