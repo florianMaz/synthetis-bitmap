@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/synthetis_bitmap.dir/sample/EasyBMPsample.cpp.o"
   "CMakeFiles/synthetis_bitmap.dir/EasyBMP.cpp.o"
-  "CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.o"
+  "CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.o"
   "CMakeFiles/synthetis_bitmap.dir/main.cpp.o"
   "CMakeFiles/synthetis_bitmap.dir/resizeBmp.cpp.o"
   "synthetis_bitmap.pdb"

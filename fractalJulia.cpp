@@ -14,6 +14,9 @@
 #define yMaxRepere 1.5 //y[-1.5 +1.5]
 
 RGBApixel color;
+BMP Fractal;
+double startTime;
+double endTime;
 
 int main(int argc, char const *argv[]) {
     printf("Fractal Julia Generated !\n");
@@ -22,23 +25,28 @@ int main(int argc, char const *argv[]) {
     int heightImg = 1000;
     double C;
 
-    BMP Fractal;
+    int x, y, etape;
+    double x2, y2, new_x, new_y;
+
     Fractal.SetSize(widthImg , heightImg);
 
-    for(int x = 0; x < widthImg; x++) {
-        for(int y = 0; y < heightImg; y++) {
+    startTime = omp_get_wtime();
 
-            double x2 = x * 0.003-xMaxRepere;
-            double y2 = y * 0.003-yMaxRepere;
+    #pragma omp parallel for private(x, y, x2, y2, etape, new_x, new_y, C, color)
+    for(x = 0; x < widthImg; x++) {
+        for(y = 0; y < heightImg; y++) {
 
-            for(int etape = 0; etape < 255; etape++) {
+            x2 = x * 0.003-xMaxRepere;
+            y2 = y * 0.003-yMaxRepere;
+
+            for(etape = 0; etape < 255; etape++) {
 
                 //Z0 = x + i.y    initiale
                 //C = |Z| = sqr(x*x + y*y)
                 //C = x*x + y*y;
 
                 //etape de calcul
-                double new_x, new_y;
+                // init new_x, new_y;
 
                 new_x = x2*x2 - y2*y2 + a;
                 new_y = 2*(x2 * y2) + b;
@@ -77,6 +85,10 @@ int main(int argc, char const *argv[]) {
             }
         }
     }
+
+    endTime = omp_get_wtime();
+
+    printf("Time for loop : %f seconds\n", (endTime-startTime));
 
     Fractal.WriteToFile("fractal.bmp");
 

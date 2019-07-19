@@ -83,18 +83,18 @@ CMakeFiles/synthetis_bitmap.dir/EasyBMP.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/synthetis_bitmap.dir/EasyBMP.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/EasyBMP.cpp" -o CMakeFiles/synthetis_bitmap.dir/EasyBMP.cpp.s
 
-CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.o: CMakeFiles/synthetis_bitmap.dir/flags.make
-CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.o: ../fractalTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.o -c "/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalTest.cpp"
+CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.o: CMakeFiles/synthetis_bitmap.dir/flags.make
+CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.o: ../fractalJulia.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.o -c "/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalJulia.cpp"
 
-CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalTest.cpp" > CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.i
+CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalJulia.cpp" > CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.i
 
-CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalTest.cpp" -o CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.s
+CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalJulia.cpp" -o CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.s
 
 CMakeFiles/synthetis_bitmap.dir/main.cpp.o: CMakeFiles/synthetis_bitmap.dir/flags.make
 CMakeFiles/synthetis_bitmap.dir/main.cpp.o: ../main.cpp
@@ -126,7 +126,7 @@ CMakeFiles/synthetis_bitmap.dir/resizeBmp.cpp.s: cmake_force
 synthetis_bitmap_OBJECTS = \
 "CMakeFiles/synthetis_bitmap.dir/sample/EasyBMPsample.cpp.o" \
 "CMakeFiles/synthetis_bitmap.dir/EasyBMP.cpp.o" \
-"CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.o" \
+"CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.o" \
 "CMakeFiles/synthetis_bitmap.dir/main.cpp.o" \
 "CMakeFiles/synthetis_bitmap.dir/resizeBmp.cpp.o"
 
@@ -135,7 +135,7 @@ synthetis_bitmap_EXTERNAL_OBJECTS =
 
 synthetis_bitmap: CMakeFiles/synthetis_bitmap.dir/sample/EasyBMPsample.cpp.o
 synthetis_bitmap: CMakeFiles/synthetis_bitmap.dir/EasyBMP.cpp.o
-synthetis_bitmap: CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.o
+synthetis_bitmap: CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.o
 synthetis_bitmap: CMakeFiles/synthetis_bitmap.dir/main.cpp.o
 synthetis_bitmap: CMakeFiles/synthetis_bitmap.dir/resizeBmp.cpp.o
 synthetis_bitmap: CMakeFiles/synthetis_bitmap.dir/build.make

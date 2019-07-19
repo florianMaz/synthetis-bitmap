@@ -150,32 +150,32 @@ EasyBMP.cpp.s:
 	$(MAKE) -f CMakeFiles/synthetis_bitmap.dir/build.make CMakeFiles/synthetis_bitmap.dir/EasyBMP.cpp.s
 .PHONY : EasyBMP.cpp.s
 
-fractalTest.o: fractalTest.cpp.o
+fractalJulia.o: fractalJulia.cpp.o
 
-.PHONY : fractalTest.o
+.PHONY : fractalJulia.o
 
 # target to build an object file
-fractalTest.cpp.o:
-	$(MAKE) -f CMakeFiles/synthetis_bitmap.dir/build.make CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.o
-.PHONY : fractalTest.cpp.o
+fractalJulia.cpp.o:
+	$(MAKE) -f CMakeFiles/synthetis_bitmap.dir/build.make CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.o
+.PHONY : fractalJulia.cpp.o
 
-fractalTest.i: fractalTest.cpp.i
+fractalJulia.i: fractalJulia.cpp.i
 
-.PHONY : fractalTest.i
+.PHONY : fractalJulia.i
 
 # target to preprocess a source file
-fractalTest.cpp.i:
-	$(MAKE) -f CMakeFiles/synthetis_bitmap.dir/build.make CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.i
-.PHONY : fractalTest.cpp.i
+fractalJulia.cpp.i:
+	$(MAKE) -f CMakeFiles/synthetis_bitmap.dir/build.make CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.i
+.PHONY : fractalJulia.cpp.i
 
-fractalTest.s: fractalTest.cpp.s
+fractalJulia.s: fractalJulia.cpp.s
 
-.PHONY : fractalTest.s
+.PHONY : fractalJulia.s
 
 # target to generate assembly for a file
-fractalTest.cpp.s:
-	$(MAKE) -f CMakeFiles/synthetis_bitmap.dir/build.make CMakeFiles/synthetis_bitmap.dir/fractalTest.cpp.s
-.PHONY : fractalTest.cpp.s
+fractalJulia.cpp.s:
+	$(MAKE) -f CMakeFiles/synthetis_bitmap.dir/build.make CMakeFiles/synthetis_bitmap.dir/fractalJulia.cpp.s
+.PHONY : fractalJulia.cpp.s
 
 main.o: main.cpp.o
 
@@ -270,9 +270,9 @@ help:
 	@echo "... EasyBMP.o"
 	@echo "... EasyBMP.i"
 	@echo "... EasyBMP.s"
-	@echo "... fractalTest.o"
-	@echo "... fractalTest.i"
-	@echo "... fractalTest.s"
+	@echo "... fractalJulia.o"
+	@echo "... fractalJulia.i"
+	@echo "... fractalJulia.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

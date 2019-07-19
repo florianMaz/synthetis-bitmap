@@ -97,7 +97,7 @@
 		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/Headers/EasyBMP_VariousBMPutilities.h">
 			<Option target="synthetis_bitmap"/>
 		</Unit>
-		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalTest.cpp">
+		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/fractalJulia.cpp">
 			<Option target="synthetis_bitmap"/>
 		</Unit>
 		<Unit filename="/Users/lays/Desktop/ESGI - 4MOC/SEM 2/ProgParallèle/TP-EASYBMP/synthetis-bitmap/main.cpp">
